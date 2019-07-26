@@ -1,0 +1,36 @@
+<import src="../template/common.swan" />
+<view class="feedbackimg" style='background:url({{feebackImg.img}});background-size:100%;'></view>
+<view class="feedback">
+    <view class='feedback-container'>
+      <text>留言反馈</text>
+        <form bindsubmit="formSubmit">
+      <view class='mybookCats' bindtap='tomap'>
+          <image class='tubiao' src='../../img/name.png'></image>
+          <!-- <button hover-class='none' class='btnfriend'>  一键导航</button>
+          <text class='iconfont icon-arrow-right'></text> -->
+           <input class='btnfriend' name="name" placeholder='请输入姓名' />
+      </view>
+      <view class='mybookCats'>
+          <image class='tubiao' src='../../img/mobile.png'></image>
+          <!-- <button hover-class='none' class='btnfriend' bindtap='getPhoneNumber' > 一键拨号</button> -->
+          <input class='btnfriend' name="phone" placeholder='请输入电话号码' />
+      </view>
+      <view class='mybookCats'>
+          <image class='tubiao' src='../../img/message.png'></image>
+          <!-- <button hover-class='none' class='btnfriend' bindtap='getPhoneNumber' > 一键拨号</button> -->
+          <text class='text'>请留下您的脚印</text>
+      </view>
+      <view class='mybookCats'>
+     <view class="conts">
+        <textarea class="areas" name="message" placeholder='空空如也，大家一起来留言吧' minlength="{{min}}" maxlength="{{max}}" bindinput="inputs"> 
+            <text class="currentWordNumber">{{currentWordNumber}}/{{max}}</text>
+            <text class="hint">{{texts}}{{num}}{{textss}}</text>
+        </textarea>
+    </view>
+     </view>
+       <button class='subBtn' form-type='submit' type='primary'>提交</button>
+     </form>
+   
+  </view>
+</view>
+ <template is="footer" data="{{{footer}}}"></template>

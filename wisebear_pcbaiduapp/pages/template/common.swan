@@ -1,0 +1,5 @@
+<template name="footer" s-if="footer">
+<view class='footer' bindtap='cli'>
+  <text>{{footer}}</text>
+</view>
+</template>

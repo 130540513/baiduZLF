@@ -1,0 +1,26 @@
+<import src="../../wxParse/wxParse.swan" /> 
+<import src="../template/common.swan" />
+<view class="casedetails">
+  <view class='casedetails-container'>
+    <text class='title'>{{detailsContent.title}}</text>
+     <view class="outline_box" s-if="{{detailsContent.outline}}">
+      <view class="outline_title" ><text  space="nbsp" decode="{{true}}">摘&nbsp;&nbsp;要</text></view>
+      <view class="outline"><text>{{detailsContent.outline}}</text></view>   
+    </view>
+    <view class='caseimg'><image src='{{detailsContent.img}}'></image> </view>
+  <view class="wxParse">
+      <template is="wxParse" data="{{{wxParseData:article.nodes}}}" />
+  </view>  
+  </view>
+   <view class="keywords">
+    <view class="keywords_content">
+      <view s-for="item, index in keywords" class="key_List">{{item}}</view>
+    </view>
+  </view>
+</view>
+<view class="ad-container">
+    <view style="background-color: #fff">
+        <ad appid="{{appid}}" apid="{{apid}}" class="ad" type="feed" ></ad>
+    </view>
+</view>
+<template is="footer" data="{{{footer}}}"></template>

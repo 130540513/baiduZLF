@@ -1,0 +1,21 @@
+<!--新闻详情页模板-->
+<template name="newsDetail">
+  <block s-for="cellData, idy in content">
+    <block s-if="cellData.type == 'view'">
+      <view class="p">
+        <block s-for="item, index in cellData.child" s-key="text">
+          <block s-if="item.type == 'a'">
+            <text class="a" data-seccode="{{item.attr['data-seccode']}}" data-secname="{{item.attr['data-secname']}}" bindtap="stockClick">{{item.text}}</text>
+          </block>
+          <block s-else>
+            <text>{{item.text}}</text>
+          </block>
+        </block>
+      </view>
+    </block>
+    <block s-if="cellData.type == 'img'">
+      {{wn_html_images}}
+      <image class="img" data-index="{{idy}}" mode="widthFix" src="{{cellData.attr.src}}" bindload="imageLoad" style="width: {{cellData['attr']['width']}};max-width: 100%;height: {{cellData['attr']['height'] ? cellData['attr']['height'] : auto}}"></image>
+    </block>
+  </block>
+</template>

@@ -1,0 +1,34 @@
+<import src="../template/common.swan" />
+<view class='bg' style='background:url({{companyname.qrcode}}); background-size: 100%;'></view>
+<view class='bg-container'>
+  <view class='logo'>
+    <image src='{{companyname.logo}}'></image>
+  </view>
+    <text class='company-name'>{{companyname.title}} </text>
+</view>
+<view class='contact'>
+  <view class='contact-container'>
+      <text>联系我们</text>
+      <view class='mybookCats' bindtap='tomap'>
+          <image class='tubiao' src='../../img/navigation.png'></image>
+          <button hover-class='none' class='btnfriend'>  一键导航</button>
+          <text class='iconfont icon-arrow-right'></text>
+      </view>
+      <view class='mybookCats'>
+          <image class='tubiao' src='../../img/dail.png'></image>
+          <button hover-class='none' class='btnfriend' bindtap='getPhoneNumber'> 一键拨号</button>
+          <text class='iconfont icon-arrow-right'></text>
+      </view>
+      <view class='mybookCats' s-if="{{serviceswitch == 1}}">
+          <image class='tubiao' src='../../img/service.png'></image>
+          <button hover-class='none' class='btnfriend' open-type='contact'>客服</button>
+          <text class='iconfont icon-arrow-right'></text>
+     </view>
+  </view>
+</view>
+<view class="ad-container">
+    <view style="background-color: #fff">
+        <ad appid="{{appid}}" apid="{{apid}}" class="ad" type="feed" ></ad>
+    </view>
+</view>
+<template is="footer" data="{{{footer}}}"></template>

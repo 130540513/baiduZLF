@@ -1,0 +1,75 @@
+{
+  "pages":[
+    "wisebear_pcbaiduapp/pages/index/index",
+    "wisebear_pcbaiduapp/pages/product/product",
+    "wisebear_pcbaiduapp/pages/case/case",
+    "wisebear_pcbaiduapp/pages/contact/contact",
+    "wisebear_pcbaiduapp/pages/details/details",
+    "wisebear_pcbaiduapp/pages/prodetails/prodetails",
+    "wisebear_pcbaiduapp/pages/noticedetails/noticedetails",
+    "wisebear_pcbaiduapp/pages/honor/honor",
+    "wisebear_pcbaiduapp/pages/casedetails/casedetails",
+    "wisebear_pcbaiduapp/pages/honordetails/honordetails",
+    "wisebear_pcbaiduapp/pages/video/video",
+    "wisebear_pcbaiduapp/pages/feedback/feedback",
+    "wisebear_pcbaiduapp/pages/login/login"
+  ],
+  "url-mapping": {
+    "wisebear_pcbaiduapp/pages/index/index":"/",
+    "wisebear_pcbaiduapp/pages/product/product":"/product",
+    "wisebear_pcbaiduapp/pages/case/case":"/case",
+    "wisebear_pcbaiduapp/pages/contact/contact":"/contact",
+    "wisebear_pcbaiduapp/pages/details/details":"/details?id=${id}",
+    "wisebear_pcbaiduapp/pages/prodetails/prodetails":"/prodetails?id=${id}",
+    "wisebear_pcbaiduapp/pages/casedetails/casedetails":"/casedetails?id=${id}",
+    "wisebear_pcbaiduapp/pages/noticedetails/noticedetails":"/noticedetails?id=${id}",
+    "wisebear_pcbaiduapp/pages/honor/honor":"/honor",
+    "wisebear_pcbaiduapp/pages/video/video":"/video",
+    "wisebear_pcbaiduapp/pages/feedback/feedback":"/feedback",
+    "wisebear_pcbaiduapp/pages/login/login":"/login?url=${url}"
+
+
+   },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#6b6b6b",
+    "selectedColor": "#338bf9",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+      "pagePath": "wisebear_pcbaiduapp/pages/index/index",
+      "text": "首页",
+      "iconPath": "wisebear_pcbaiduapp/img/index.png",
+      "selectedIconPath": "wisebear_pcbaiduapp/img/index-selected.png"
+    },
+      {
+        "pagePath": "wisebear_pcbaiduapp/pages/product/product",
+        "text": "产品中心",
+        "iconPath": "wisebear_pcbaiduapp/img/product.png",
+        "selectedIconPath": "wisebear_pcbaiduapp/img/product-selected.png"
+      },{
+        "pagePath": "wisebear_pcbaiduapp/pages/case/case",
+        "text": "经典案例",
+        "iconPath": "wisebear_pcbaiduapp/img/case.png",
+        "selectedIconPath": "wisebear_pcbaiduapp/img/case-selected.png"
+      },
+      {
+        "pagePath": "wisebear_pcbaiduapp/pages/contact/contact",
+        "text": "联系我们",
+        "iconPath": "wisebear_pcbaiduapp/img/my.png",
+        "selectedIconPath": "wisebear_pcbaiduapp/img/my-selected.png"
+      }
+      
+    ]
+  },
+  "permission":{
+    "scope.userLocation":{
+      "desc":"小程序接口展示"
+    }
+  }
+}

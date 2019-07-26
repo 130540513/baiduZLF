@@ -1,0 +1,28 @@
+<!-- 轮播图 -->
+<import src="../template/common.swan" />
+<swiper class='slider' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <swiper-item s-for="item, index in sliders" s-key='index'>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+</swiper>
+<view class='product'>
+  <view class='product-container'> 
+    <scroll-view scroll-x="true"  scroll-left="{{scrollLeft}}" class="swiper-tab">
+       <view s-for="item, index in proList" style="{{currentTab==item.id ? 'color:'+fontColor+';border-bottom:5rpx solid ' + fontColor : ''}};margin:0 {{proList.length > 2 ? 55 : 115}}rpx;" class="swiper-tab-item" data-current="{{item.id}}" bindtap="clickTab">{{item.title}}</view>
+    </scroll-view>
+    <view class='product-list'>
+      <navigator class='list-left' hover-class='none' url='/wisebear_pcbaiduapp/pages/prodetails/prodetails?id={{item.id}}' s-for="item, index in picList">
+        <image src='{{item.img_url}}'></image>
+        <text>{{item.title}}</text>
+      </navigator>
+    </view> 
+  </view>
+</view>
+<view class="ad-container">
+    <view style="background-color: #fff">
+        <!-- <ad appid="db18a74b" apid="6329363" class="ad" type="feed" ></ad> -->
+        <!-- <ad appid="db18a74b" apid="6329291" class="ad" type="feed"></ad> -->
+        <ad appid="{{appid}}" apid="{{apid}}" class="ad" type="feed" ></ad>
+    </view>
+</view>
+ <template is="footer" data="{{{footer}}}"></template>

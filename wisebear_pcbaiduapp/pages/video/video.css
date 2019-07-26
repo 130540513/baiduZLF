@@ -1,0 +1,57 @@
+/* pages/video/video.css */
+
+
+page{
+  background: #f7f7f7;
+}
+.cover{
+  position: relative;
+}
+.video{
+  width: 100%;
+}
+.video-container{
+  width: 95%;
+  margin: 0 auto;
+  /* background: pink; */
+}
+.vedio_list{
+  width: 100%;
+  /* border: 5rpx solid orangered; */
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  margin-top: 20rpx;
+  background: white;
+}
+.video-title{
+ display: block;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient: vertical;
+  /* border: 1rpx solid black; */
+  font-size: 32rpx;
+  padding: 20rpx;
+  color: #333;
+ width: 96%;
+  line-height: 50rpx;
+
+}
+ video{
+  width: 100%;
+  height: 380rpx;
+  }
+.coverImg{
+  width: 100%;
+  height: 380rpx;
+}
+.playImg{
+  position: absolute;
+  top:40%;
+  left:45%;
+  width: 80rpx;
+  height: 80rpx;
+  /* border: 1rpx solid black ; */
+  z-index: 99999;
+}

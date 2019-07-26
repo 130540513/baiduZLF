@@ -1,0 +1,6 @@
+<!--pages/login/login.wxml-->
+<view class='login'>
+<button type="primary" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">
+  立即登录
+</button>
+</view>

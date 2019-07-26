@@ -1,0 +1,117 @@
+/* pages/feedback/feedback.css */
+@import "../template/common.css";
+page{
+  background: #f7f7f7;
+}
+.feedbackimg{
+  width: 100%;
+  height: 380rpx;
+  background: url("http://www.2345.com/help/images/v2/copy.gif");
+  background-size: 100%;
+  margin-bottom: 20rpx;
+ 
+}
+.feedback{
+  width: 100%;
+}
+.feedback-container{
+  width:95%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15rpx;
+}
+.feedback-container>text{
+  padding: 25rpx;
+  display: block;
+  color: #333;
+  font-size: 33rpx;
+ border-bottom: 1rpx solid #f7f7f7;
+ margin-bottom: 20rpx;
+}
+.mybookCats{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #999;
+  margin-bottom: 25rpx;
+  
+}
+.tubiao{
+  width: 55rpx;
+  height: 55rpx;
+  float: left;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  /* background: paleturquoise */
+}
+.mybookCats>text{
+font-size: 30rpx;
+letter-spacing: 2rpx;
+margin-left: 15rpx;
+display: block;
+margin-right: 15rpx
+}
+.mybookCats>text:nth-of-type(1){
+  float: left;
+}
+.mybookCats>text:nth-of-type(2){
+  float: right;
+}
+.btnfriend{
+  width:600rpx;
+  /* background: white; */
+  height: 70rpx;
+  float: left;
+  color: #999;
+  padding-left:15rpx;
+  border-radius: 15rpx;
+  border: 1rpx solid #f7f7f7;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.text{
+color: #999;
+}
+      
+.conts{
+  width:96%;
+  /* height: 300rpx; */
+  border: 1rpx solid #f7f7f7;
+  border-radius: 15rpx;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+}
+.areas{
+  width:96%;
+  /* height:300rpx; */
+  font-size: 30rpx;
+  text-indent: 28rpx;
+  /* border: 1rpx solid yellow; */
+  padding-top: 30rpx;
+  margin: 0 auto;
+  overflow: hidden;   
+  position: relative; 
+}
+.currentWordNumber{
+  font-size: 28rpx;
+  color: gray;
+  position: absolute;
+  left: 80%;
+  top: -1%;
+}
+.hint{
+   font-size: 28rpx;
+   position: absolute;
+  bottom: 15rpx;
+   left: 60%;
+   color: #FF6600;
+}
+.subBtn{
+  width: 25%;
+  height: 70rpx;
+  line-height: 70rpx;
+ bottom: 20rpx;
+}

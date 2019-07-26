@@ -1,0 +1,17 @@
+<view class="video">
+  <view class='video-container'>
+  <view class='vedio_list' s-for="item, index in list">
+  <text class='video-title'>{{item.title}}</text>
+    <view>
+       <video autoplay='{{true}}' id="index{{index}}" src="{{item.url}}" s-if="playIndex==index"></video>
+    </view>
+    <view id="{{index}}" class="cover" style="display: {{playIndex==index?'none':'block'}};" bindtap="videoPlay">
+      <image class="coverImg" src="{{item.img}}" mode="scaleToFill">
+        
+      </image>
+      <image class="playImg" src="../../img/video-start.png" mode="scaleToFill"></image>
+    </view>
+</view>
+</view>
+</view>
+

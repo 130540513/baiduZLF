@@ -1,0 +1,10 @@
+<view class='honor'>
+  <view class='honor-container'> 
+    <view class='honor-list'>
+      <navigator class='list-left' hover-class='none' url='/wisebear_pcbaiduapp/pages/honordetails/honordetails?id={{item.id}}' s-for="item, index in honorList">
+        <image src='{{item.img}}'></image>
+        <text>{{item.title}}</text>
+      </navigator>
+    </view> 
+  </view>
+</view>

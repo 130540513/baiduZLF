@@ -1,0 +1,24 @@
+<!-- 轮播图 -->
+<import src="../template/common.swan" />
+<swiper class='slider' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <swiper-item s-for="item, index in sliders" s-key='index'>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+</swiper>
+<view class="case">
+  <view class='case-container'>
+      <scroll-view  scroll-x="true" scroll-left="{{scrollLeft}}" class="swiper-tab">
+        <view s-for="item, index in casenav" style="{{currentTab==item.id ? 'color:'+fontColor+';border-bottom:5rpx solid ' + fontColor : ''}};" class="swiper-tab-item " data-current="{{item.id}}" bindtap="clickTab">{{item.title}}</view>
+      </scroll-view>
+      <navigator class='case-List' url='/wisebear_pcbaiduapp/pages/casedetails/casedetails?id={{item.id}}' s-for="item, index in caseList">
+        <image src='{{item.img}}'></image>
+        <text>{{item.title}}</text>
+      </navigator> 
+  </view>
+</view>
+<view class="ad-container">
+    <view style="background-color: #fff">
+        <ad appid="{{appid}}" apid="{{apid}}" class="ad" type="feed" ></ad>
+    </view>
+</view>
+ <template is="footer" data="{{{footer}}}"></template>

@@ -1,0 +1,52 @@
+/* pages/honor/honor.css */
+page{
+  background: #f7f7f7;
+}
+.honor{
+  width: 100%;
+  /* background: pink; */
+}
+.honor-container{
+  width: 95%;
+  margin: 0 auto;
+  /* border: 1rpx solid black; */
+  margin-top: 20rpx;
+}
+.honor-list{
+  width: 100%;
+  /* height: 300rpx; */
+  /* background: yellow; */
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.list-left{
+  width: 48.6%;
+  height: 280rpx;
+  display: flex;
+  background: white;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15rpx;
+  margin-bottom: 20rpx;
+}
+.list-left>image{
+  width: 100%;
+  height: 85%;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  /* border: 1rpx solid black; */
+
+}
+.list-left>text{
+ color: #333;
+ font-size: 30rpx;
+ display: block;
+ margin-bottom: 15rpx;
+ margin-top: 15rpx
+}

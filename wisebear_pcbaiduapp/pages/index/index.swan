@@ -1,0 +1,85 @@
+<!-- index.wxml -->
+<import src="../template/common.swan" />
+<!-- 轮播图 -->
+<swiper indicator-dots="{{indicatorDots}}" class='slider' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <swiper-item s-for="item, index in imgUrls" s-key='index'>
+      <image src="{{item.img}}" class="slide-image" />
+    </swiper-item>
+</swiper>
+<!-- 公告栏 -->
+
+<swiper class='notice' autoplay="{{autoplay}}" interval="{{interval}}" vertical="{{vertical}}">
+    <swiper-item class='notice-container' s-for="item, index in noticeUrls">
+       <navigator class="notivenav"  url='/wisebear_pcbaiduapp/pages/noticedetails/noticedetails?id={{item.id}}'>
+          <image class='notice-img' src='{{item.img}}'></image>
+          <view style='color:{{fontColor}}' class='notice-text'>{{item.title }}</view>
+        </navigator>
+    </swiper-item>
+</swiper>
+
+<!-- 分类按钮 -->
+<view class='grids' s-if="{{serviceswitch == 1}}">
+  <view class='grids_container'>
+    <navigator hover-class='none' class='item_nav' url='/wisebear_pcbaiduapp/pages/feedback/feedback'>
+      <view class="item">
+        <image src='../../img/message-fedback.png'></image>
+      </view>
+      <text>留言反馈</text>
+    </navigator>
+    <navigator hover-class='none' class='item_nav' url='/wisebear_pcbaiduapp/pages/honor/honor'>
+      <view class="item">
+        <image src='../../img/honner.png'></image>
+      </view>
+      <text>荣誉资质</text>
+    </navigator>
+    <navigator hover-class='none' class='item_nav' url='/wisebear_pcbaiduapp/pages/video/video'>
+      <view class="item">
+        <image src='../../img/video.png'></image>
+      </view>
+      <text>视频</text>
+    </navigator>
+    <view hover-class='none' class='item_nav'>
+      <view class="item">
+       <button hover-class='none' class='btn'bindtap="goods" open-type='contact'>
+        <image src='../../img/c-service.png'></image>
+        </button>
+      </view>
+      <text>在线咨询</text>
+   </view>
+  </view>
+</view>
+<!--广告-->
+<view class="ad-container">
+    <view style="background-color: #fff">
+       <ad appid="{{appid}}" apid="{{apid}}" class="ad" type="feed"></ad>
+    </view>
+</view>
+<!--新闻资讯  -->
+<view class='new'>
+  <view class='new-container'>
+    <text class='new-title'>新闻资讯</text>
+      <scroll-view scroll-x="true" class="swiper-tab" scroll-left="{{scrollLeft}}">
+        <view style="{{currentTab==item.id ? 'color:'+fontColor+';border-bottom:5rpx solid ' + fontColor : ''}};" s-for="item, index in newList" class="swiper-tab-item" data-current="{{item.id}}" bindtap="clickTab">{{item.title}}</view>
+      </scroll-view>
+       <view>
+      <navigator hover-class='none' url="/wisebear_pcbaiduapp/pages/details/details?id={{item.id}}" class="tab-item" s-for="item, index in newContent"> 
+        <view class='new-content'>
+          <text class='new-content-title'>{{item.title}}</text>
+          <view class='new-content-img'>
+          <view class="text">
+              <text>{{item.outline}}</text>
+              <text class='create_time'>{{item.create_time}}</text>
+          </view>
+            <image src='{{item.img}}'></image>
+          </view>
+        </view>
+      </navigator>
+      </view>
+  </view>
+</view>
+<view class="ad-container">
+    <view style="background-color: #fff">
+       <ad appid="{{appids}}" apid="{{apids}}" class="ad" type="feed"></ad>
+    </view>
+</view>
+ <template is="footer" data="{{{footer}}}"></template>

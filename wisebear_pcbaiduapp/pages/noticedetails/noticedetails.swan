@@ -1,0 +1,15 @@
+<import src="../../wxParse/wxParse.swan" /> 
+<view class="noticedetails">
+  <view class='noticedetails-container'>
+    <text class='title'>{{detailsContent.title}}</text>
+    <view class='noticeimg'><image src='{{detailsContent.img}}'></image> </view>
+  <view class="wxParse">
+      <template is="wxParse" data="{{{wxParseData:article.nodes}}}" />
+  </view>  
+  </view>
+</view>
+<view class="ad-container">
+    <view style="background-color: #fff">
+        <ad appid="{{appid}}" apid="{{apid}}" class="ad" type="feed" ></ad>
+    </view>
+</view>
